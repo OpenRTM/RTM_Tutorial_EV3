@@ -7,14 +7,14 @@ echo $workdir
 #tar -xf ode-0.13.tar.bz2
 cd ode-0.13/
 cd build
-premake4 --with-demos --platform=x64 --only-double --only-shared gmake
-cd gmake
-make config=release ode
-make config=release drawstuff
 #premake4 --with-demos --platform=x64 --only-double --only-shared codeblocks
+premake4 --with-demos --platform=x64 --only-double --only-shared gmake
 #cd codeblocks
+cd gmake
 #codeblocks --target=Release --rebuild ode.cbp
 #codeblocks --target=Release --rebuild drawstuff.cbp
+make config=release ode
+make config=release drawstuff
 
 
 #./configure --enable-release --with-x --enable-double-precision --with-libccd CFLAGS="-fPIC"
