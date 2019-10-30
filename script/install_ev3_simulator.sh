@@ -33,14 +33,13 @@ mkdir build
 cd build
 cmake -DODE_DIRECTORIY=$workdir/ode-0.13 ..
 make
-cp -r $workdir/ode-0.13/drawstuff $workdir/EV3SimulatorRTC/build/src
+cp -r $workdir/ode-0.13/drawstuff ./
 
 cd $workdir
 wget https://raw.githubusercontent.com/OpenRTM/RTM_Tutorial_EV3/master/EXE/test.csv
 wget https://raw.githubusercontent.com/OpenRTM/RTM_Tutorial_EV3/master/EXE/rtc.conf
 wget https://raw.githubusercontent.com/OpenRTM/RTM_Tutorial_EV3/master/EXE/EV3Simulator.conf
 
-cp test.csv $workdir/EV3SimulatorRTC/build/
-cp rtc.conf $workdir/EV3SimulatorRTC/build/
-cp EV3Simulator.conf $workdir/EV3SimulatorRTC/build/
-
+mv test.csv $workdir/EV3SimulatorRTC/build/
+mv rtc.conf $workdir/EV3SimulatorRTC/build/
+mv EV3Simulator.conf $workdir/EV3SimulatorRTC/build/

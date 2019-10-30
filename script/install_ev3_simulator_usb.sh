@@ -34,7 +34,7 @@ mkdir build
 cd build
 cmake -DODE_DIRECTORIY=$workdir/ode-0.13 ..
 make
-cp -r $workdir/ode-0.13/drawstuff $workdir/EV3SimulatorRTC/build/src
+cp -r $workdir/ode-0.13/drawstuff ./
 
 
 cp $workdir/../EXE/test.csv $workdir/EV3SimulatorRTC/build/
